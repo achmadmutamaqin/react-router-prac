@@ -21,6 +21,11 @@ function App() {
           <Route exact path="/" element={<Home />}></Route>
           <Route path="/about" element={<About />}></Route>
           <Route path="/topics" element={<Topics />}>
+            /*
+            This is a nested route within the Topics components
+            The path is relative to the Topics component
+            In this case, the path is /topics/:topicId
+            */
             <Route path=":topicId" element={<Topic />}></Route>
           </Route>
         </Routes>
